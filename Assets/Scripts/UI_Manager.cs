@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class UI_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -19,19 +19,24 @@ public class UI_Manager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag == "Item")
+        if (other.CompareTag("Item"))
         {
-            Debug.Log("a");
+            UIPerma.transform.Find("Interact").GetComponent<TextMeshProUGUI>().SetText("E coger");
             UIPerma.transform.Find("Interact").gameObject.SetActive(true);
         }
+
+        if (other.CompareTag("door"))
+        {
+            UIPerma.transform.Find("Interact").GetComponent<TextMeshProUGUI>().SetText("E entrar en las catacumbas");
+            UIPerma.transform.Find("Interact").gameObject.SetActive(true);
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Item")
-        {
-            Debug.Log("a");
+        
             UIPerma.transform.Find("Interact").gameObject.SetActive(false);
-        }
+        
     }
 }

@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - Item
   - WeaponManager
+  - door
   layers:
   - Default
   - TransparentFX
