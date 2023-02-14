@@ -13,6 +13,7 @@ public class SceneChange : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                FindObjectOfType<AudioManager>().Play("Puerta");
                 SceneManager.LoadScene(SceneNumber);
             }
         }

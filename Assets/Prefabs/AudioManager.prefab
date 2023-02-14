@@ -69,4 +69,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Puerta
+    clip: {fileID: 8300000, guid: 4c66ce4758316464f975e6e490dde1ed, type: 3}
+    volume: 0.466
+    pitch: 0.83
+    loop: 0
+    source: {fileID: 0}
   SceneMusic: 0
