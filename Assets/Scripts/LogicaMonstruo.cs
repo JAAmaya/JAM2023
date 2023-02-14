@@ -3,7 +3,9 @@ using UnityEngine.AI;
 
 public class LogicaMonstruo : MonoBehaviour
 {
-    public float VelocidadCorrer = 1f;
+    public bool forzarAndar = false;
+    public float VelocidadAndar;
+    public float VelocidadCorrer;
     Transform destino;
     NavMeshAgent agent;
     Animator anim;
@@ -15,15 +17,17 @@ public class LogicaMonstruo : MonoBehaviour
         destino = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        agent.speed = VelocidadCorrer;
     }
 
     private void Update()
     {
         agent.destination = destino.position;
-        var VelX = agent.velocity.x/VelocidadCorrer;
-        var VelY = agent.velocity.z/VelocidadCorrer;
+        agent.speed = forzarAndar ? VelocidadAndar : VelocidadCorrer;
+        var VelX = agent.velocity.magnitude / VelocidadCorrer;
+        //var VelY = agent.velocity.z / VelocidadCorrer;
 
         anim.SetFloat("VelX", VelX);
-        anim.SetFloat("VelY", VelY);
+        //anim.SetFloat("VelY", VelY);
     }
 }
