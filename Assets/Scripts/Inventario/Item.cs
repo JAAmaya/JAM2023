@@ -40,6 +40,7 @@ public class Item : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E))
             {
                 equipado = false;
+                FindObjectOfType<AudioManager>().Play("CogerObjeto");
             }
             if(!equipado)
             {

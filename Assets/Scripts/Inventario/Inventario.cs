@@ -33,6 +33,7 @@ public class Inventario : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             habilitado = !habilitado;
+            FindObjectOfType<AudioManager>().Play("Inventario");
             inventario.SetActive(habilitado);
             if (habilitado)
             {
@@ -61,6 +62,7 @@ public class Inventario : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                FindObjectOfType<AudioManager>().Play("CogerObjeto");
                 GameObject itemRecogido = other.gameObject;
                 Item item = itemRecogido.GetComponent<Item>();
                 AddItem(item);

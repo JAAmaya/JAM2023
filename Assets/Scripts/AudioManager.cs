@@ -36,23 +36,53 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        switch (SceneMusic)
+        Play("Ambiente");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown("w"))
         {
-            case 0:
-                Play("TemaMenus");
-                break;
-            case 1:
-                Play("TemaPeleaBosque");
-                break;
-            case 2:
-                Play("TemaPeleaAgua");
-                break;
-            case 3:
-                Play("TemaPeleaMontaña");
-                break;
-            case 4:
-                Play("TemaPeleaDungeon");
-                break;
+            Play("Pasos");
+        }
+
+        if (Input.GetKeyUp("w"))
+        {
+            Stop("Pasos");
+        }
+
+        if (Input.GetKeyDown("a"))
+        {
+            Play("Pasos");
+        }
+
+        if (Input.GetKeyUp("a"))
+        {
+            Stop("Pasos");
+        }
+
+        if (Input.GetKeyDown("s"))
+        {
+            Play("Pasos");
+        }
+
+        if (Input.GetKeyUp("s"))
+        {
+            Stop("Pasos");
+        }
+        if (Input.GetKeyDown("d"))
+        {
+            Play("Pasos");
+        }
+
+        if (Input.GetKeyUp("d"))
+        {
+            Stop("Pasos");
+        }
+
+        if (Input.GetKey("space"))
+        {
+            Stop("Pasos");
         }
     }
 
@@ -62,8 +92,10 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    public void PlayAttackSound()
+    public void Stop(string name)
     {
-        AudioManager.Instance.Play("AtaqueAliado");
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Stop();
     }
+
 }

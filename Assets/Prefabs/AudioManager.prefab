@@ -48,7 +48,25 @@ MonoBehaviour:
   - name: Pasos
     clip: {fileID: 8300000, guid: 49e7f30e3b7041e43b5d25241da246a5, type: 3}
     volume: 0.402
-    pitch: 1.21
+    pitch: 0.81
+    loop: 1
+    source: {fileID: 0}
+  - name: Ambiente
+    clip: {fileID: 8300000, guid: 5f4b3aa8fb4d28c4d8c4060ef12a5db7, type: 3}
+    volume: 0.337
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: CogerObjeto
+    clip: {fileID: 8300000, guid: 5bbda99477deb2643958b68d0fb4da94, type: 3}
+    volume: 0.466
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Inventario
+    clip: {fileID: 8300000, guid: 569ed47abbc749a42930d88e0b88176e, type: 3}
+    volume: 0.466
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   SceneMusic: 0
