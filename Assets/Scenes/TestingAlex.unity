@@ -2653,7 +2653,12 @@ PrefabInstance:
     - target: {fileID: 8389186433257112851, guid: 557ab227250def545b6f04c8252f61da,
         type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0
+      value: 0.331
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389186433257112851, guid: 557ab227250def545b6f04c8252f61da,
+        type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.696
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557ab227250def545b6f04c8252f61da, type: 3}
