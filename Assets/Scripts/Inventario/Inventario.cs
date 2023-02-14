@@ -87,4 +87,9 @@ public class Inventario : MonoBehaviour
             }
         }
     }
+
+    public bool Habilitado()
+    {
+        return habilitado;
+    }
 }
