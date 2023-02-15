@@ -9,6 +9,7 @@ TagManager:
   - WeaponManager
   - door
   - libroCutreDeJorge
+  - valla
   layers:
   - Default
   - TransparentFX

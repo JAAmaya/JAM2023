@@ -6,6 +6,7 @@ public class UI_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
     public Canvas UIPerma;
+    public GameObject llave;
     void Start()
     {
         
@@ -28,6 +29,18 @@ public class UI_Manager : MonoBehaviour
         if (other.CompareTag("door"))
         {
             UIPerma.transform.Find("Interact").GetComponent<TextMeshProUGUI>().SetText("E entrar en las catacumbas");
+            UIPerma.transform.Find("Interact").gameObject.SetActive(true);
+        }
+
+        if (other.CompareTag("valla"))
+        {
+            UIPerma.transform.Find("Interact").GetComponent<TextMeshProUGUI>().SetText("Necesitas una llave");
+            UIPerma.transform.Find("Interact").gameObject.SetActive(true);
+        }
+
+        if (other.CompareTag("valla") && llave.activeInHierarchy)
+        {
+            UIPerma.transform.Find("Interact").GetComponent<TextMeshProUGUI>().SetText("E abrir");
             UIPerma.transform.Find("Interact").gameObject.SetActive(true);
         }
 
