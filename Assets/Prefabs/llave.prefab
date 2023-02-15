@@ -49,7 +49,7 @@ MonoBehaviour:
   ID: 3
   type: Arma
   descripcion: llave
-  icono: {fileID: 21300000, guid: 8a8a68fa3f8355c4890844d5a0a000bd, type: 3}
+  icono: {fileID: 21300000, guid: 31b35d343164fdf4496339672982e7e3, type: 3}
   recogido: 0
   equipado: 0
   WeaponManager: {fileID: 0}

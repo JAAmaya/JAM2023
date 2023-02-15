@@ -11348,6 +11348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monstruo 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5367084467981280706, guid: fac0729da6d23c94aa09d5fc934e3d9b,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemie
+      objectReference: {fileID: 0}
     - target: {fileID: 6126196930772478176, guid: fac0729da6d23c94aa09d5fc934e3d9b,
         type: 3}
       propertyPath: m_RootOrder
@@ -11403,6 +11408,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6776428613744310380, guid: fac0729da6d23c94aa09d5fc934e3d9b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e0d82aae5e08606459c270fb3bbac92b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fac0729da6d23c94aa09d5fc934e3d9b, type: 3}
 --- !u!1001 &730968423
@@ -12555,6 +12565,7 @@ GameObject:
   - component: {fileID: 818311665}
   - component: {fileID: 818311664}
   - component: {fileID: 818311663}
+  - component: {fileID: 818311668}
   m_Layer: 0
   m_Name: PentaSang (1)
   m_TagString: Untagged
@@ -12654,6 +12665,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &818311668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818311662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96280fbe2085fa4688fc16621756f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &834617802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14547,6 +14570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIPerma: {fileID: 976637847}
   llave: {fileID: 1328234638}
+  wp: {fileID: 0}
 --- !u!4 &980466085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3364835391650748939, guid: 1733cd41dda8e5942980643bb01c3bdb,
@@ -30132,6 +30156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIPerma: {fileID: 976637847}
   llave: {fileID: 0}
+  wp: {fileID: 0}
 --- !u!1001 &398736974158857592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31429,11 +31454,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2087497642}
     m_Modifications:
-    - target: {fileID: 6426362451423731458, guid: f82d49ae660500c40940a67d3a67e069,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8238865699455556350, guid: f82d49ae660500c40940a67d3a67e069,
         type: 3}
       propertyPath: m_Name
