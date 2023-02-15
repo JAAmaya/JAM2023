@@ -4219,6 +4219,11 @@ PrefabInstance:
       propertyPath: handBook
       value: 
       objectReference: {fileID: 962190772}
+    - target: {fileID: 8200502557153576831, guid: 51845501c83d6664d8f0c86b75e9f5e1,
+        type: 3}
+      propertyPath: inventario
+      value: 
+      objectReference: {fileID: 20711938}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51845501c83d6664d8f0c86b75e9f5e1, type: 3}
 --- !u!224 &976637846 stripped

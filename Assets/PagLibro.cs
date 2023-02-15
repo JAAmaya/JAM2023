@@ -11,6 +11,7 @@ public class PagLibro : MonoBehaviour
     public int maxPag;
     private bool habilitado = false;
     public GameObject handBook;
+    public GameObject inventario;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,12 @@ public class PagLibro : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }
+        }
+        if (!handBook.activeInHierarchy && !inventario.activeInHierarchy) 
+        {
+            habilitado = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            this.transform.GetChild(0).gameObject.SetActive(habilitado);
         }
     }
     public void NextPage() 
