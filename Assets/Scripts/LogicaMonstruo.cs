@@ -1,3 +1,5 @@
+using StarterAssets;
+using System.Collections;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.AI;
@@ -50,23 +52,22 @@ public class LogicaMonstruo : MonoBehaviour
         {
             //Debug.LogWarning("AYUDA ME ESTA VIENDO");
             agent.destination = jugador.transform.position;
-            if(!siguiendo)
+            if (!siguiendo)
             {
                 agent.speed = VelocidadCorrer;
-                FindObjectOfType<AudioManager>().Play("Piano");
                 FindObjectOfType<AudioManager>().Play("MonstruoTeVe");
             }
             siguiendo = true;
             //Debug.Log((transform.position - jugador.transform.position).magnitude);
-            if ((transform.position-jugador.transform.position).magnitude<1.1f)
+            if ((transform.position - jugador.transform.position).magnitude < 1.1f)
             {
                 Cursor.lockState = CursorLockMode.Confined;
-                SceneManager.LoadScene(3);
+                StartCoroutine(CargarDerrota());
             }
         }
         else
         {
-            if(siguiendo && agent.remainingDistance < DistanciaMinima)
+            if (siguiendo && agent.remainingDistance < DistanciaMinima)
             {
                 agent.speed = VelocidadAndar;
                 siguiendo = false;
@@ -91,5 +92,13 @@ public class LogicaMonstruo : MonoBehaviour
         //if (path.status == NavMeshPathStatus.PathPartial)
         //    SiguienteDestino();
         agent.SetDestination(siguienteDestino);
+    }
+
+    IEnumerator CargarDerrota()
+    {
+        FindObjectOfType<AudioManager>().Play("Piano");
+        jugador.GetComponent<FirstPersonController>().MoveSpeed = 0f;
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(3);
     }
 }
