@@ -75,8 +75,9 @@ namespace StarterAssets
 		private const float _threshold = 0.01f;
 
 		private Inventario inventario;
+		private PagLibro pagLibro;
 
-		private bool IsCurrentDeviceMouse
+        private bool IsCurrentDeviceMouse
 		{
 			get
 			{
@@ -112,7 +113,8 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 
 			inventario = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>();
-		}
+			pagLibro = GameObject.FindGameObjectWithTag("libroCutreDeJorge").GetComponent<PagLibro>();
+        }
 
 		private void Update()
 		{
@@ -136,7 +138,7 @@ namespace StarterAssets
 		private void CameraRotation()
 		{
 			// if there is an input
-			if (_input.look.sqrMagnitude >= _threshold && !inventario.Habilitado())
+			if (_input.look.sqrMagnitude >= _threshold && !inventario.Habilitado() && !pagLibro.Habilitado())
 			{
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;

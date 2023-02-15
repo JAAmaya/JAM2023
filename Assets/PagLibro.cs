@@ -62,4 +62,9 @@ public class PagLibro : MonoBehaviour
         }
 
     }
+
+    public bool Habilitado()
+    {
+        return habilitado;
+    }
 }
