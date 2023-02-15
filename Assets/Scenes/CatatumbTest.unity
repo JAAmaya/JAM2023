@@ -11636,6 +11636,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 844877848}
     m_Modifications:
+    - target: {fileID: 2668645806925743282, guid: 51845501c83d6664d8f0c86b75e9f5e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668645806925743282, guid: 51845501c83d6664d8f0c86b75e9f5e1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490969016604484914, guid: 51845501c83d6664d8f0c86b75e9f5e1,
+        type: 3}
+      propertyPath: m_TagString
+      value: libroCutreDeJorge
+      objectReference: {fileID: 0}
     - target: {fileID: 7855043533340583120, guid: 51845501c83d6664d8f0c86b75e9f5e1,
         type: 3}
       propertyPath: m_Name
@@ -11751,6 +11766,11 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 8200502557153576831, guid: 51845501c83d6664d8f0c86b75e9f5e1,
+        type: 3}
+      propertyPath: handBook
+      value: 
+      objectReference: {fileID: 1957690701}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51845501c83d6664d8f0c86b75e9f5e1, type: 3}
 --- !u!224 &976637846 stripped
@@ -22750,6 +22770,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1733cd41dda8e5942980643bb01c3bdb, type: 3}
+--- !u!1 &1957690701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5488243667609011849, guid: 2d3a85ecde41a8246a79669975912b74,
+    type: 3}
+  m_PrefabInstance: {fileID: 60889539378096550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1975573350
 GameObject:
   m_ObjectHideFlags: 0
