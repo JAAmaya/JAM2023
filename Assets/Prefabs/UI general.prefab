@@ -3159,6 +3159,9 @@ MonoBehaviour:
   crafTiza: {fileID: 5391035888512127391}
   crafVela: {fileID: 3565947481921653518}
   crafVial: {fileID: 6952767333512408434}
+  tizaS: {fileID: 0}
+  velaS: {fileID: 2839206118273010396, guid: a96452a6690548642879bd9fb13dafa5, type: 3}
+  vialP: {fileID: 0}
 --- !u!1 &7749173629827986937
 GameObject:
   m_ObjectHideFlags: 0

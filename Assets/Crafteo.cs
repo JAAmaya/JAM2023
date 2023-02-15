@@ -30,10 +30,9 @@ public class Crafteo : MonoBehaviour
     {
         Debug.Log("hice una vela");
         GameManager.numVelas -= 1; 
-        inventario.DesecharObj(14);
+        
         GameManager.numVelasS += 1;
-        Item item = velaS.GetComponent<Item>();
-        inventario.AddItem(item);
+        
         crafVela.interactable = false;
     }
     public void CraftViS()

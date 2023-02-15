@@ -67,6 +67,8 @@ public class Inventario : MonoBehaviour
                 Item item = itemRecogido.GetComponent<Item>();
                 if (item.ID == 15) { Debug.Log("b"); GameManager.rosario = true; }
                 if (item.ID == 14) { Debug.Log("c"); GameManager.numVelas +=1; }
+                if (item.ID == 13) { Debug.Log("e"); GameManager.numViales += 1; }
+                if (item.ID == 12) { Debug.Log("f"); GameManager.tiza = true; }
                 AddItem(item);
             }
         }
@@ -103,13 +105,18 @@ public class Inventario : MonoBehaviour
         {
             slot[i] = slots.transform.GetChild(i).gameObject;
 
-            if (slot[i].GetComponent<Slot>().item.ID == id)
+            if (slot[i].GetComponent<Slot>().item != null)
             {
-                slot[i].GetComponent<Slot>().item = null;
-                slot[i].GetComponent<Slot>().vacio = true;
-                slot[i].GetComponent<Slot>().icono = null;
-                slot[i].GetComponent<Slot>().ActualizarSlot();
+                if (slot[i].GetComponent<Slot>().item.ID == id)
+                {
+                    slot[i].GetComponent<Slot>().item = null;
+                    slot[i].GetComponent<Slot>().vacio = true;
+                    slot[i].GetComponent<Slot>().icono = null;
+                    //slot[i].GetComponent<Slot>().ActualizarSlot();
+                }
             }
+
+            
         }
     }
 }

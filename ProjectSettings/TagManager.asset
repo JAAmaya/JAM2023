@@ -10,6 +10,7 @@ TagManager:
   - door
   - libroCutreDeJorge
   - valla
+  - enemie
   layers:
   - Default
   - TransparentFX

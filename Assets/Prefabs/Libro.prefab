@@ -134,7 +134,7 @@ MonoBehaviour:
   ID: 23
   type: Arma
   descripcion: Alquimia
-  icono: {fileID: 21300000, guid: 13c0a3ef60e3af144979a980e8937e9f, type: 3}
+  icono: {fileID: 21300000, guid: fd448b9d14361ad4699492e222ced638, type: 3}
   recogido: 0
   equipado: 0
   WeaponManager: {fileID: 0}

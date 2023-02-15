@@ -157,9 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 15
-  type: Arma
+  type: A
   descripcion: Cosa sagrada
-  icono: {fileID: 21300000, guid: ee61438594e71b3488f31dc0db807fdb, type: 3}
+  icono: {fileID: 21300000, guid: 12a2f3f9f326e94459a70ac4d990496d, type: 3}
   recogido: 0
   equipado: 0
   WeaponManager: {fileID: 0}
