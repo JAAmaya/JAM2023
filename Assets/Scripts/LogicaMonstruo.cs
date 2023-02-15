@@ -1,6 +1,8 @@
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class LogicaMonstruo : MonoBehaviour
 {
@@ -51,9 +53,16 @@ public class LogicaMonstruo : MonoBehaviour
             if(!siguiendo)
             {
                 agent.speed = VelocidadCorrer;
+                FindObjectOfType<AudioManager>().Play("Piano");
                 FindObjectOfType<AudioManager>().Play("MonstruoTeVe");
             }
             siguiendo = true;
+            //Debug.Log((transform.position - jugador.transform.position).magnitude);
+            if ((transform.position-jugador.transform.position).magnitude<1.1f)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                SceneManager.LoadScene(3);
+            }
         }
         else
         {
