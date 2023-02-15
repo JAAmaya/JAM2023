@@ -65,6 +65,7 @@ public class Inventario : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("CogerObjeto");
                 GameObject itemRecogido = other.gameObject;
                 Item item = itemRecogido.GetComponent<Item>();
+                if (item.ID == 15) { Debug.Log("b"); GameManager.rosario = true; }
                 AddItem(item);
             }
         }

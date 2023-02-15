@@ -40,7 +40,7 @@ public class UI_Manager : MonoBehaviour
 
         if (other.CompareTag("valla") && llave.activeInHierarchy)
         {
-            UIPerma.transform.Find("Interact").GetComponent<TextMeshProUGUI>().SetText("E abrir");
+            UIPerma.transform.Find("Interact").GetComponent<TextMeshProUGUI>().SetText("F abrir");
             UIPerma.transform.Find("Interact").gameObject.SetActive(true);
         }
 
