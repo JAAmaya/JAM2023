@@ -99,6 +99,6 @@ public class LogicaMonstruo : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Piano");
         jugador.GetComponent<FirstPersonController>().MoveSpeed = 0f;
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }
