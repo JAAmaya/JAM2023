@@ -47,13 +47,13 @@ MonoBehaviour:
   sounds:
   - name: Pasos
     clip: {fileID: 8300000, guid: 49e7f30e3b7041e43b5d25241da246a5, type: 3}
-    volume: 0.402
+    volume: 0.237
     pitch: 0.81
     loop: 1
     source: {fileID: 0}
   - name: Ambiente
     clip: {fileID: 8300000, guid: 5f4b3aa8fb4d28c4d8c4060ef12a5db7, type: 3}
-    volume: 0.337
+    volume: 0.236
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -73,6 +73,18 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 4c66ce4758316464f975e6e490dde1ed, type: 3}
     volume: 0.466
     pitch: 0.83
+    loop: 0
+    source: {fileID: 0}
+  - name: MonstruoTeVe
+    clip: {fileID: 8300000, guid: 445f0f07b73ff96478b0c61e9455070c, type: 3}
+    volume: 0.904
+    pitch: 0.67
+    loop: 0
+    source: {fileID: 0}
+  - name: Piano
+    clip: {fileID: 8300000, guid: 21ec272397fc72a488246c79c949dede, type: 3}
+    volume: 0.932
+    pitch: 0.67
     loop: 0
     source: {fileID: 0}
   SceneMusic: 0
