@@ -66,6 +66,7 @@ public class Inventario : MonoBehaviour
                 GameObject itemRecogido = other.gameObject;
                 Item item = itemRecogido.GetComponent<Item>();
                 if (item.ID == 15) { Debug.Log("b"); GameManager.rosario = true; }
+                if (item.ID == 14) { Debug.Log("c"); GameManager.numVelas +=1; }
                 AddItem(item);
             }
         }
@@ -94,5 +95,21 @@ public class Inventario : MonoBehaviour
     public bool Habilitado()
     {
         return habilitado;
+    }
+
+    public void DesecharObj(int id) 
+    {
+        for (int i = 0; i < slotsTotales; i++)
+        {
+            slot[i] = slots.transform.GetChild(i).gameObject;
+
+            if (slot[i].GetComponent<Slot>().item.ID == id)
+            {
+                slot[i].GetComponent<Slot>().item = null;
+                slot[i].GetComponent<Slot>().vacio = true;
+                slot[i].GetComponent<Slot>().icono = null;
+                slot[i].GetComponent<Slot>().ActualizarSlot();
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static int numVelas = 0, numViales = 0, numVelasS = 0;
@@ -29,5 +29,24 @@ public class GameManager : MonoBehaviour
         {
             Libro.transform.GetChild(0).GetChild(0).GetChild(4).GetChild(1).gameObject.SetActive(true);
         }
+
+        if (pag2 && rosario && numVelas>0 && !Libro.transform.GetChild(0).GetChild(0).GetChild(3).GetChild(1).Find("Create").GetComponent<Button>().interactable)
+        {
+             
+            Libro.transform.GetChild(0).GetChild(0).GetChild(3).GetChild(1).Find("Create").GetComponent<Button>().interactable = true;
+        }
+
+        if ((pag1 && rosario && tiza) && !Libro.transform.GetChild(0).GetChild(0).GetChild(2).GetChild(1).Find("Create").GetComponent<Button>().interactable)
+        {
+            
+            Libro.transform.GetChild(0).GetChild(0).GetChild(2).GetChild(1).Find("Create").GetComponent<Button>().interactable = true;
+        }
+
+        if ((pag3 && numViales>0) && !Libro.transform.GetChild(0).GetChild(0).GetChild(4).GetChild(1).Find("Create").GetComponent<Button>().interactable)
+        {
+
+            Libro.transform.GetChild(0).GetChild(0).GetChild(4).GetChild(1).Find("Create").GetComponent<Button>().interactable = true;
+        }
+
     }
 }
