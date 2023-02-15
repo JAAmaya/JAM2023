@@ -11,6 +11,7 @@ TagManager:
   - libroCutreDeJorge
   - valla
   - enemie
+  - Pausa
   layers:
   - Default
   - TransparentFX

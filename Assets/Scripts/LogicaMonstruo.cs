@@ -61,7 +61,7 @@ public class LogicaMonstruo : MonoBehaviour
             //Debug.Log((transform.position - jugador.transform.position).magnitude);
             if ((transform.position - jugador.transform.position).magnitude < 1.1f)
             {
-                Cursor.lockState = CursorLockMode.Confined;
+                
                 StartCoroutine(CargarDerrota());
             }
         }
@@ -99,6 +99,7 @@ public class LogicaMonstruo : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Piano");
         jugador.GetComponent<FirstPersonController>().MoveSpeed = 0f;
         yield return new WaitForSeconds(2f);
+        Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene(2);
     }
 }

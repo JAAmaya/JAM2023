@@ -21,4 +21,9 @@ public class MenuInicial : MonoBehaviour
     {
         SceneManager.LoadScene(id);
     }
+
+    public void Salir()
+    {
+        Application.Quit();
+    }
 }

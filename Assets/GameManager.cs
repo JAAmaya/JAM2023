@@ -1,19 +1,23 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static int numVelas = 0, numViales = 0, numVelasS = 0;
-    public static bool pag1 = false, pag2 = false, pag3 = false, tiza = false, tizaS = false, vialP = false, rosario = false, win= false, ritual = true;
+    public static bool pag1 = false, pag2 = false, pag3 = false, tiza = false, tizaS = false, vialP = false, rosario = false, win = false, ritual = true;
     public Canvas Libro;
-    public GameObject penta1, penta2, penta3,penta4;
+    public GameObject penta1, penta2, penta3, penta4;
     public GameObject vela1, vela2, vela3;
-
+    public GameObject Pausa;
+    bool pausa = false;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; 
+        GameObject.FindGameObjectWithTag("Pausa").SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -62,7 +66,7 @@ public class GameManager : MonoBehaviour
             penta3.gameObject.SetActive(true);
         }
 
-        if (numVelasS > 0 && numVelasS < 2) 
+        if (numVelasS > 0 && numVelasS < 2)
         {
             vela1.gameObject.SetActive(true);
         }
@@ -77,14 +81,35 @@ public class GameManager : MonoBehaviour
             vela3.gameObject.SetActive(true);
         }
 
-        if (vialP && tizaS && numVelasS >= 3) 
+        if (vialP && tizaS && numVelasS >= 3)
         {
             penta4.gameObject.SetActive(true);
         }
-        if (win) 
+        if (win)
         {
 
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pausa = !pausa;
+            var player = GameObject.FindGameObjectWithTag("Player");
+            var controller = player.GetComponent<FirstPersonController>();
+            if (pausa)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                controller.SprintSpeed = 0;
+                controller.MoveSpeed = 0;
+                controller.RotationSpeed = 0;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                controller.SprintSpeed = 6;
+                controller.MoveSpeed = 4;
+                controller.RotationSpeed = 1.96f;
+            }
+            Pausa.SetActive(pausa);
+        }
     }
 }
