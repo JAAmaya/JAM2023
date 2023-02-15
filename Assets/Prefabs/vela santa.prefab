@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 2839206118242890829}
   - component: {fileID: 2839206118242890827}
   - component: {fileID: 2839206118242890826}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Fuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}

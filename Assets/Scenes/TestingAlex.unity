@@ -4094,6 +4094,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 844877848}
     m_Modifications:
+    - target: {fileID: 7490969016604484914, guid: 51845501c83d6664d8f0c86b75e9f5e1,
+        type: 3}
+      propertyPath: m_TagString
+      value: libroCutreDeJorge
+      objectReference: {fileID: 0}
     - target: {fileID: 7855043533098902825, guid: 51845501c83d6664d8f0c86b75e9f5e1,
         type: 3}
       propertyPath: m_FillAmount
