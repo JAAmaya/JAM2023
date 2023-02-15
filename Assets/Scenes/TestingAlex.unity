@@ -4075,6 +4075,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1733cd41dda8e5942980643bb01c3bdb, type: 3}
+--- !u!1 &962190772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5488243667609011849, guid: 2d3a85ecde41a8246a79669975912b74,
+    type: 3}
+  m_PrefabInstance: {fileID: 60889539378096550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &973397084 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6411420570974080670, guid: 4a13af6d845a56b4f93ff346363db30b,
@@ -4212,7 +4218,7 @@ PrefabInstance:
         type: 3}
       propertyPath: handBook
       value: 
-      objectReference: {fileID: 1361235553}
+      objectReference: {fileID: 962190772}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51845501c83d6664d8f0c86b75e9f5e1, type: 3}
 --- !u!224 &976637846 stripped
@@ -5899,12 +5905,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ff499f4280e624e81d4b59b14444e2, type: 3}
---- !u!1 &1361235553 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5488243667609011849, guid: 2d3a85ecde41a8246a79669975912b74,
-    type: 3}
-  m_PrefabInstance: {fileID: 60889539378096550}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1384244432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8702,6 +8702,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: far clip plane
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: orthographic size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
