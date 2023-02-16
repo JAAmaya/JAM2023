@@ -12,9 +12,13 @@ public class Inventario : MonoBehaviour
     private bool habilitado = false;
     private int slotsTotales, slotsDisponibles;
 
-    void Start()
+    private void Awake()
     {
         inventario.SetActive(false);
+    }
+
+    void Start()
+    {
         slotsTotales = slots.transform.childCount;
         slot = new GameObject[slotsTotales];
         for (int i = 0; i < slotsTotales; i++)
@@ -66,7 +70,7 @@ public class Inventario : MonoBehaviour
                 GameObject itemRecogido = other.gameObject;
                 Item item = itemRecogido.GetComponent<Item>();
                 if (item.ID == 15) { Debug.Log("b"); GameManager.rosario = true; }
-                if (item.ID == 14) { Debug.Log("c"); GameManager.numVelas +=1; }
+                if (item.ID == 14) { Debug.Log("c"); GameManager.numVelas += 1; }
                 if (item.ID == 13) { Debug.Log("e"); GameManager.numViales += 1; }
                 if (item.ID == 12) { Debug.Log("f"); GameManager.tiza = true; }
                 AddItem(item);
@@ -99,7 +103,7 @@ public class Inventario : MonoBehaviour
         return habilitado;
     }
 
-    public void DesecharObj(int id) 
+    public void DesecharObj(int id)
     {
         for (int i = 0; i < slotsTotales; i++)
         {
@@ -116,7 +120,22 @@ public class Inventario : MonoBehaviour
                 }
             }
 
-            
+
+        }
+    }
+
+    public void CerrarInventario()
+    {
+        habilitado = !habilitado;
+        FindObjectOfType<AudioManager>().Play("Inventario");
+        inventario.SetActive(habilitado);
+        if (habilitado)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

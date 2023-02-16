@@ -35,5 +35,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         Usar();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().CerrarInventario();
     }
 }

@@ -35,7 +35,7 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
-        if (equipado)
+        if (equipado && !GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().Habilitado())
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
@@ -53,6 +53,14 @@ public class Item : MonoBehaviour
     {
         if (type == "Arma")
         {
+            int allWeapons = WeaponManager.transform.childCount;
+            for (int i = 0; i < allWeapons; i++)
+            {
+                if (WeaponManager.transform.GetChild(i).gameObject.activeInHierarchy)
+                {
+                    WeaponManager.transform.GetChild(i).gameObject.SetActive(false);
+                }
+            }
             weapon.SetActive(true);
             weapon.GetComponent<Item>().equipado = true;
             //equipado = true;
